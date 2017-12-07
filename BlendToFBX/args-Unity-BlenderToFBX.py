@@ -28,7 +28,7 @@ outfile = sys.argv[6]
 print("Starting blender to FBX conversion " + outfile)
 
 if blender249:
-	mtx4_x90n = Blender.Mathutils.RotationMatrix(-90, 4, 'x')
+	mtx4_x90n = Blender.Mathutils.RotationMatrix(-90, 4, 'x') * Blender.Mathutils.ScakeMatrix(100.0, 4)
 	export_fbx.write(outfile,
 		EXP_OBS_SELECTED=False,
 		EXP_MESH=True,
@@ -48,7 +48,7 @@ else:
 	import math
 	from mathutils import Matrix
 	# -90 degrees
-	mtx4_x90n = Matrix.Rotation(-math.pi / 2.0, 4, 'X')
+	mtx4_x90n = Matrix.Rotation(-math.pi / 2.0, 4, 'X') * Matrix.Scale(100.0, 4)
 	
 	print("moo")
 	
