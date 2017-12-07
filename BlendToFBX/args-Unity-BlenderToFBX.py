@@ -75,9 +75,7 @@ else:
 	else:
 		# 2.59 and later
 		kwargs = io_scene_fbx.export_fbx.defaults_unity3d()
-        
-        kwargs.global_matrix = kwargs.global_matrix * Matrix.Scale(100.0, 4)
-        
+		kwargs.global_matrix = kwargs.global_matrix * Matrix.Scale(100.0, 4)
 		io_scene_fbx.export_fbx.save(FakeOp(), bpy.context, filepath=outfile, **kwargs)
 	# HQ normals are not supported in the current exporter
 
