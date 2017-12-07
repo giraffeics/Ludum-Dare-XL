@@ -59,7 +59,7 @@ else:
 	exportObjects = ['ARMATURE', 'EMPTY', 'MESH']
 		
 	minorVersion = bpy.app.version[1];	
-	if minorVersion <= 58:
+	if true:#minorVersion <= 58:
 		# 2.58
 		io_scene_fbx.export_fbx.save(FakeOp(), bpy.context, filepath=outfile,
 			global_matrix=mtx4_x90n,
@@ -72,11 +72,11 @@ else:
 			ANIM_ACTION_ALL=True,
 			batch_mode='OFF',	
 			BATCH_OWN_DIR=False)
-	else:
-		# 2.59 and later
-		kwargs = io_scene_fbx.export_fbx.defaults_unity3d()
-		kwargs.set('global_matrix', kwargs.get('global_matrix') * Matrix.Scale(100.0, 4))
-		io_scene_fbx.export_fbx.save(FakeOp(), bpy.context, filepath=outfile, **kwargs)
+	#else:
+	#	# 2.59 and later
+	#	kwargs = io_scene_fbx.export_fbx.defaults_unity3d()
+	#	kwargs.set('global_matrix', kwargs.get('global_matrix') * Matrix.Scale(100.0, 4))
+	#	io_scene_fbx.export_fbx.save(FakeOp(), bpy.context, filepath=outfile, **kwargs)
 	# HQ normals are not supported in the current exporter
 
 print("Finished blender to FBX conversion " + outfile)
