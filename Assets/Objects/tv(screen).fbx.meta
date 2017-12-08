@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 3ef1afbd0f071cc48aa8ed52eaa6aa61
-timeCreated: 1512354268
+guid: c661cf620c37e024db2b2b624a4b8b3c
+timeCreated: 1512327235
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -17,8 +17,6 @@ ModelImporter:
     3300002: Cube_001
     4300000: Cube_001
     4300002: Cube
-    6400000: Cube
-    6400002: Cube_001
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -47,9 +45,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 100
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
