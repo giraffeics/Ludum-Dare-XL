@@ -58,7 +58,7 @@ else:
 	exportObjects = ['ARMATURE', 'EMPTY', 'MESH']
 		
 	minorVersion = bpy.app.version[1];	
-	if 1==1:#minorVersion <= 58:
+	if True:#minorVersion <= 58:
 		# 2.58
 		io_scene_fbx.export_fbx.save(FakeOp(), bpy.context, filepath=outfile,
 			global_matrix=mtx4_x90n,
